@@ -33,10 +33,10 @@ $(document).ready(function () {
 
     $(window).scroll(function () {
         if (fixedContactButtonOpened) {
-            closeFixedContactIcon($(this));
+            closeFixedContactIcon(fixedContactButton);
         }
         if (mainHeaderMenuTogglerOpened) {
-            closeMainHeaderToggler($(this));
+            closeMainHeaderToggler(mainHeaderMenuToggler);
         }
     })
 
