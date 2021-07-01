@@ -106,10 +106,6 @@ button {
 .main-section #mainHeader #mainHeaderMenuToggler:hover {
   color: #efefefbd;
 }
-.main-section #mainHeader #mainHeaderMenuToggler:hover:hover {
-  -webkit-transform: scaleX(1.05) scaleY(1.05);
-  transform: scaleX(1.05) scaleY(1.05);
-}
 .main-section #mainHeader #mainHeaderMenuToggler #topHeaderLinksContainer {
   position: absolute;
   top: 120%;

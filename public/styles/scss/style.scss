@@ -28,7 +28,6 @@
                 }
             }
             &:hover {
-                @include scale-element(1.05, 1.05);
                 color: #efefefbd;
             }
             #topHeaderLinksContainer {
