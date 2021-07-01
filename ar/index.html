@@ -32,33 +32,146 @@
 <body>
 
 
-    <section class="main-section py-lg-5 py-4 px-md-5 px-4" id="mainSection">
+    <section class="main-section py-lg-5 py-4" id="mainSection">
 
-        <header class="main-header px-md-4" id="mainHeader">
+        <div class="container">
 
-            <button class="main-header-menu-toggler utility" id="mainHeaderMenuToggler">
-                <i class="fa fa-bars"></i>
-                <i class="fa fa-times"></i>
+            <header class="main-header mb-3" id="mainHeader">
 
-                <div class="links-wrapper" id="topHeaderLinksContainer">
-                    <a href="#">خدماتنـا</a>
-                    <a href="#">مشروعاتنـا</a>
-                    <a href="#">اتصل بنـا</a>
-                    <a href="#">من نحـن</a>
+                <button class="main-header-menu-toggler utility" id="mainHeaderMenuToggler">
+                    <i class="fa fa-bars"></i>
+                    <i class="fa fa-times"></i>
+
+                    <div class="links-wrapper" id="topHeaderLinksContainer">
+                        <a href="#">خدماتنـا</a>
+                        <a href="#">مشروعاتنـا</a>
+                        <a href="#">اتصل بنـا</a>
+                        <a href="#">من نحـن</a>
+                    </div>
+
+                </button>
+
+                <div class="call-details-wrapper">
+
+                    <a href="mailTo:info@mirage-building.com" dir="ltr" class="mail me-2 d-md-inline-block d-none">
+                        info@mirage-building.com
+                        <i class="fa fa-envelope me-1"></i>
+                    </a>
+
+                    <a href="tel:0201010668909" class="mail d-md-inline-block d-none" dir="ltr">
+                        01010668909
+                        <i class="fa fa-phone-alt me-1" dir="ltr"></i>
+                    </a>
+
+                    <button class="main-call-now d-md-none d-block" id="mainCallNow">
+                        <i class="fa fa-envelope me-1"></i>
+                        اتصل الآن
+                    </button>
+
                 </div>
 
-            </button>
+            </header>
 
-            <div class="call-details-wrapper">
+        </div>
 
-                <button>
-                    <i class="fa fa-phone me-1"></i>
-                    اتصل بنا الآن
-                </button>
+        <div class="main-banner py-xl-5 py-4">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-xl-9 col-lg-8 mb-lg-0 mb-4">
+
+                        <div class="text-container">
+
+                            <h1 class="header mb-4 ps-3 pe-5 py-3 ">
+                                ميراج للتطوير العقاري
+                            </h1>
+
+                            <p class="sub-header mb-3 ps-3">
+                                رواد مجال الإستثمار و التطوير العقاري
+                            </p>
+
+                            <div class="description ps-3">
+
+
+                                <ul class="desc-list">
+
+                                    <li class="desc-item first">
+                                        <span>رفاهية السكن</span>
+                                    </li>
+                                    <li class="desc-item second">
+                                        <span>بساطة و شفافية</span>
+                                    </li>
+                                    <li class="desc-item third">
+                                        <span>رؤية واضحة فى التقارب مع العملاء</span>
+                                    </li>
+                                    <li class="desc-item fourth">
+                                        <span>خبرة طويلة فى مجال المقاولات و التشييد</span>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                            <div class="main-button ps-5 mt-3" id="mainButton">
+                                <button>احجز وحدتك الآن</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4">
+
+                        <form action="" class="main-section-form" id="mainSectionForm">
+
+                            <div class="form-group mb-2">
+
+                                <label for="fullName" class="form-label">الأسم بالكامل</label>
+                                <input class="form-control" type="text" id="fullName" name="fullName"
+                                    placeholder="ادخل اسمك كاملاً...">
+
+                            </div>
+
+                            <div class="form-group mb-2">
+
+                                <label for="mobile" class="form-label">الموبايل</label>
+                                <input class="form-control" type="text" id="mobile" name="mobile"
+                                    placeholder="ادخل رقم الهاتف">
+
+                            </div>
+
+                            <div class="form-group mb-2">
+
+                                <label for="email" class="form-label">البريد الإلكترونى</label>
+                                <input class="form-control" type="email" id="email" name="email"
+                                    placeholder="ادخل البريد الإلكترونى..">
+
+                            </div>
+
+                            <div class="form-group mb-2">
+
+                                <label for="time" class="form-label">أنسب وقت للاتصال</label>
+                                <input class="form-control" type="text" id="time" name="time"
+                                    placeholder="مثال : الثالثة عصراً">
+
+                            </div>
+
+                            <div class="form-group mt-4">
+
+                                <input type="submit" id="mainSendBtn" name="submit" value="إرســـال">
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
 
             </div>
 
-        </header>
+        </div>
 
     </section>
 

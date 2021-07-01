@@ -16,6 +16,8 @@
         align-items: center;
         #mainHeaderMenuToggler {
             position: relative;
+            width: 50px;
+            height: 50px;
             border: none;
             background-color: transparent;
             font-size: 2rem;
@@ -35,10 +37,11 @@
                 top: 150%;
                 min-width: 220px;
                 right: 0;
-                background-color: #00000081;
+                background-color: #000000e1;
                 padding: 3rem 1.2rem;
                 border-radius: 50px;
                 display: none;
+                z-index: 50;
                 a {
                     display: block;
                     color: #f5eeeeb7;
@@ -58,19 +61,117 @@
         }
 
         .call-details-wrapper {
-            button {
-                display: block;
-                border: none;
-                background-color: #f31e1ea4;
+            a {
                 color: $white;
-                font-weight: 600;
-                padding: 0.625rem 1.2rem;
+                text-decoration: none;
+            }
+            #mainCallNow {
+                background-color: $orangeDark;
+                color: $white;
+                padding: 0.625rem 1rem;
+                border: none;
                 border-radius: 50px;
-                transition: all 0.4s;
-                &:hover {
-                    @include scale-element(1.05, 1.05);
-                    background-color: #f31e1eb9;
+            }
+        }
+    }
+
+    .main-banner {
+        color: $white;
+        .text-container {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            .header {
+                background-color: #ee670d9f;
+                clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+                animation: bottomUpAnimation 1.5s ease-in-out;
+            }
+            .sub-header {
+                font-size: 1.5rem;
+                animation: bottomUpAnimation 2.25s ease-in-out;
+            }
+
+            .description {
+                .desc-list {
+                    .desc-item {
+                        font-size: 1.3rem;
+                        margin-bottom: 0.325rem;
+                        color: #f8e8e4ea;
+                        span {
+                            position: relative;
+                            right: 8px;
+                        }
+                        &::marker {
+                            content: "\f058";
+                            font-family: "Font Awesome 5 Pro";
+                            color: rgba(250, 180, 123, 0.822);
+                        }
+                        &.first {
+                            animation: bottomUpAnimation 3s ease-in-out;
+                        }
+                        &.second {
+                            animation: bottomUpAnimation 3.25s ease-in-out;
+                        }
+                        &.third {
+                            animation: bottomUpAnimation 3.5s ease-in-out;
+                        }
+                        &.fourth {
+                            animation: bottomUpAnimation 3.75s ease-in-out;
+                        }
+                    }
                 }
+            }
+            #mainButton {
+                button {
+                    border: none;
+                    background-color: #df1a1a;
+                    color: $white;
+                    min-width: 180px;
+                    text-align: center;
+                    padding: 0.625rem 0;
+                    border-radius: 25px;
+                    animation: bottomUpAnimation 3.5s ease-in-out;
+                }
+            }
+        }
+    }
+
+    #mainSectionForm {
+        max-width: 400px;
+        margin: auto;
+        background-color: #cf430b91;
+        padding: 1.5rem 2rem;
+        color: $white;
+        font-size: 0.825rem;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #000000;
+        animation: bottomUpAnimation 2s ease-in-out;
+
+        input {
+            outline: none !important;
+            box-shadow: none !important;
+            border: none !important;
+            border-radius: 2px;
+        }
+
+        input::placeholder {
+            font-size: 0.725rem;
+        }
+
+        #mainSendBtn {
+            background-color: #050c1ad5;
+            display: block;
+            color: $white;
+            width: 100%;
+            border: none;
+            border-radius: 25px;
+            padding: 0.625rem 0;
+            font-size: 1rem;
+            @include bubble(#050c1ad5, 1.1);
+            &:hover {
+                background-color: #07132bd5;
             }
         }
     }

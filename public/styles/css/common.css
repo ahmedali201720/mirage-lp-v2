@@ -13,6 +13,36 @@ body *:not(.fa):not(.fas):not(.far):not(.fab):not(.fad):lang(en) {
   direction: ltr;
 }
 
+@-webkit-keyframes bottomUpAnimation {
+  0% {
+    -webkit-transform: translateY(120px);
+    transform: translateY(120px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes bottomUpAnimation {
+  0% {
+    -webkit-transform: translateY(120px);
+    transform: translateY(120px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .rotate-z-180 {
   display: block !important;
   -webkit-transform: rotateZ(180deg);
@@ -64,8 +94,11 @@ button {
   position: fixed;
   width: 50px;
   left: 30px;
-  bottom: 80px;
-  padding: 0.5rem auto 0.5rem auto;
+  bottom: 85px;
+  padding: 0.525rem;
+  background-color: #00000085;
+  border-radius: 50px;
+  text-align: center;
   display: none;
 }
 #contactIconsContainer a {

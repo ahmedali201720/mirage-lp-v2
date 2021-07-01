@@ -44,7 +44,7 @@ $(document).ready(function () {
         }
     })
 
-    $("*").not('.utility').click(function () {
+    $("*").not('.utility , .utility i').click(function () {
 
         if (fixedContactButtonOpened) {
             closeFixedContactIcon(fixedContactButton);
