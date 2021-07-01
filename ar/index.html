@@ -15,7 +15,7 @@
     <link rel="icon" href="../public/img/logo.png">
     <!-- Google Font -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <!-- Fontawesome CDN -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -32,24 +32,65 @@
 <body>
 
 
-    <section class="main-section" id="mainSection">
+    <section class="main-section py-lg-5 py-4 px-md-5 px-4" id="mainSection">
 
+        <header class="main-header px-md-4" id="mainHeader">
 
+            <button class="main-header-menu-toggler" id="mainHeaderMenuToggler">
+                <i class="fa fa-bars"></i>
+                <i class="fa fa-times"></i>
+
+                <div class="links-wrapper" id="topHeaderLinksContainer">
+                    <a href="#">خدماتنـا</a>
+                    <a href="#">مشروعاتنـا</a>
+                    <a href="#">اتصل بنـا</a>
+                    <a href="#">من نحـن</a>
+                </div>
+
+            </button>
+
+            <div class="call-details-wrapper">
+
+                <button>
+                    <i class="fa fa-phone me-1"></i>
+                    اتصل بنا الآن
+                </button>
+
+            </div>
+
+        </header>
 
     </section>
 
-    <!-- Fixed contact icon -->
+    <!-- Fixed contact button -->
 
     <button class="fixed-contact-button" id="fixedContactButton">
-        <i class="fas fa-ellipsis-v"></i>
+        <i class="fas fa-ellipsis-v toggle-icon"></i>
+        <i class="fa fa-times toggle-icon"></i>
     </button>
+
+    <div class="contact-icons-container" id="contactIconsContainer">
+
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+
+    </div>
+
+    <section class="py-5"></section>
+
+
 
 
     <!-- Popper js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
         crossorigin="anonymous"></script>
+    <script src="../public/scripts/resources/jquery351.js"></script>
     <script src="../public/scripts/resources/bootstrap.min.js"></script>
+    <script src="../public/scripts/scripts/utility.js"></script>
     <script type="module" src="../public/scripts/scripts/script.js"></script>
 
 </body>

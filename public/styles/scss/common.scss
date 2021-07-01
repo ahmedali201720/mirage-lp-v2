@@ -21,10 +21,127 @@ body {
     * {
         box-sizing: border-box;
         &:not(.fa):not(.fas):not(.far):not(.fab):not(.fad):lang(ar) {
-            font-family: "Cairo", sans-serif;
+            font-family: "El Messiri", sans-serif;
+            direction: rtl;
         }
         &:not(.fa):not(.fas):not(.far):not(.fab):not(.fad):lang(en) {
             font-family: "Montaserrat", sans-serif;
+            direction: ltr;
         }
+    }
+}
+
+@mixin bubble($color, $scaleValue) {
+    & {
+        position: relative;
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color;
+        border-radius: 50px;
+        z-index: -1;
+        transition: all 0.4s;
+        opacity: 1;
+    }
+    &:hover::after {
+        opacity: 0;
+        @include prefix(transform, scale($scaleValue), webkit moz o ms);
+    }
+}
+
+@mixin scale-element($x, $y) {
+    &:hover {
+        -webkit-transform: scaleX($x) scaleY($y);
+        transform: scaleX($x) scaleY($y);
+    }
+}
+
+@mixin position($value, $top, $left) {
+    & {
+        position: $value;
+        top: $top;
+        left: $left;
+    }
+}
+
+@mixin prefix($property, $value, $prefixes: ()) {
+    @each $var in $prefixes {
+        #{'-'+ $var + '-' + $property}: $value;
+    }
+    #{$property}: $value;
+}
+
+@mixin text-overflow-ellipsis {
+    & {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+
+.rotate-z-180 {
+    display: block !important;
+    -webkit-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+    transition: transform 2s !important;
+}
+
+button {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#fixedContactButton {
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    border: none;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.3rem;
+    border-radius: 50%;
+    background-color: #f46224c9;
+    color: $white;
+    box-shadow: 0 0 5px #524b4b !important;
+    transition: all 0.4s;
+    i {
+        &.fa-times {
+            display: none;
+        }
+    }
+    &:hover {
+        @include scale-element(1.1, 1.1);
+        background-color: lighten($color: $orangeDark, $amount: 1%);
+        i {
+            transition: all 0.4s;
+            @include scale-element(1.1, 1.1);
+        }
+    }
+}
+
+#contactIconsContainer {
+    position: fixed;
+    width: 50px;
+    left: 30px;
+    bottom: 80px;
+    padding: 0.5rem auto 0.5rem auto;
+
+    display: none;
+    a {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        margin-bottom: 0.325rem;
+        color: #ffffffc2;
+        font-size: 2rem;
     }
 }

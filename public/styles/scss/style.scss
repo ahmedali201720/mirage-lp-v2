@@ -7,5 +7,73 @@
 .main-section {
     background: linear-gradient(to bottom right, #4419077a, #4708087a), url("../../img/cover-5.jpg");
     background-size: cover;
+    background-attachment: fixed;
     min-height: 100vh;
+
+    #mainHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        #mainHeaderMenuToggler {
+            position: relative;
+            border: none;
+            background-color: transparent;
+            font-size: 2rem;
+            color: #efefef;
+            transition: all 0.4s;
+            i {
+                font-weight: 500;
+                &.fa-times {
+                    display: none;
+                }
+            }
+            &:hover {
+                @include scale-element(1.05, 1.05);
+                color: #efefefbd;
+            }
+            #topHeaderLinksContainer {
+                position: absolute;
+                top: 120%;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+                background-color: #00000046;
+                padding: 3rem 1.2rem;
+                border-radius: 50px;
+                display: none;
+                a {
+                    display: block;
+                    color: #f5eeeeb7;
+                    text-decoration: none;
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin: 2rem 0;
+                    transition: all 0.3s;
+                    backface-visibility: hidden;
+                    transform: translateZ(0);
+                    &:hover {
+                        color: #f8cbb6b7;
+                        @include scale-element(1.03, 1.03);
+                    }
+                }
+            }
+        }
+
+        .call-details-wrapper {
+            button {
+                display: block;
+                border: none;
+                background-color: #f31e1ea4;
+                color: $white;
+                font-weight: 600;
+                padding: 0.625rem 1.2rem;
+                border-radius: 50px;
+                transition: all 0.4s;
+                &:hover {
+                    @include scale-element(1.05, 1.05);
+                    background-color: #f31e1eb9;
+                }
+            }
+        }
+    }
 }
