@@ -1,0 +1,132 @@
+body {
+  padding: 0;
+}
+
+body * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body *:not(.fa):not(.fas):not(.far):not(.fab):not(.fad):lang(ar) {
+  font-family: "El Messiri", sans-serif;
+  direction: rtl;
+}
+
+body *:not(.fa):not(.fas):not(.far):not(.fab):not(.fad):lang(en) {
+  font-family: "Montaserrat", sans-serif;
+  direction: ltr;
+}
+
+@-webkit-keyframes bottomUpAnimation {
+  0% {
+    -webkit-transform: translateY(120px);
+    transform: translateY(120px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bottomUpAnimation {
+  0% {
+    -webkit-transform: translateY(120px);
+    transform: translateY(120px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.rotate-z-180 {
+  display: block !important;
+  -webkit-transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
+  -webkit-transition: -webkit-transform 2s !important;
+  transition: -webkit-transform 2s !important;
+  transition: transform 2s !important;
+  transition: transform 2s, -webkit-transform 2s !important;
+}
+
+button {
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+#fixedContactButton {
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+  border: none;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  background-color: #f46224c9;
+  color: #ffffff;
+  -webkit-box-shadow: 0 0 5px #524b4b !important;
+          box-shadow: 0 0 5px #524b4b !important;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+#fixedContactButton i.fa-times {
+  display: none;
+}
+
+#fixedContactButton:hover {
+  background-color: #f46729;
+}
+
+#fixedContactButton:hover:hover {
+  -webkit-transform: scaleX(1.1) scaleY(1.1);
+  transform: scaleX(1.1) scaleY(1.1);
+}
+
+#fixedContactButton:hover i {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+#fixedContactButton:hover i:hover {
+  -webkit-transform: scaleX(1.1) scaleY(1.1);
+  transform: scaleX(1.1) scaleY(1.1);
+}
+
+#contactIconsContainer {
+  position: fixed;
+  width: 50px;
+  left: 30px;
+  bottom: 85px;
+  padding: 0.525rem;
+  background-color: #00000085;
+  border-radius: 50px;
+  text-align: center;
+  display: none;
+}
+
+#contactIconsContainer a {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  margin-bottom: 0.325rem;
+  color: #ffffffc2;
+  font-size: 2rem;
+}
+/*# sourceMappingURL=common.css.map */
