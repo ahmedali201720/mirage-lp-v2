@@ -1,0 +1,30 @@
+// Variables
+
+$orangeDark: #f46424;
+$orangeColor: #f45c16;
+$orangeLight: #f48c54;
+$darkColor: #3d3d3d;
+$white: #ffffff;
+$black: #000000;
+
+$xxl: 1400px;
+$xl: 1200px;
+$lg: 992px;
+$md: 768;
+$sm: 576px;
+$xs: 360px;
+$xxs: 320px;
+$fold: 280px;
+
+body {
+    padding: 0;
+    * {
+        box-sizing: border-box;
+        &:not(.fa):not(.fas):not(.far):not(.fab):not(.fad):lang(ar) {
+            font-family: "Cairo", sans-serif;
+        }
+        &:not(.fa):not(.fas):not(.far):not(.fab):not(.fad):lang(en) {
+            font-family: "Montaserrat", sans-serif;
+        }
+    }
+}

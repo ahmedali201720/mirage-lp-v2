@@ -1,0 +1,11 @@
+// ********************************************************************************************
+@import "./common.scss";
+// ********************************************************************************************
+
+// Main Section Styles
+
+.main-section {
+    background: linear-gradient(to bottom right, #4419077a, #4708087a), url("../../img/cover-5.jpg");
+    background-size: cover;
+    min-height: 100vh;
+}

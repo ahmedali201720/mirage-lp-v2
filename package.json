@@ -1,0 +1,22 @@
+{
+  "name": "mirage-landingpage",
+  "version": "1.0.0",
+  "description": "Mirage construction landing page dependencies",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass -w public/styles/scss/common.scss:public/styles/css/common.css public/styles/scss/style.scss:public/styles/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmedali201720/mirage-landing-page.git"
+  },
+  "author": "Ahmed Ali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmedali201720/mirage-landing-page/issues"
+  },
+  "homepage": "https://github.com/ahmedali201720/mirage-landing-page#readme",
+  "dependencies": {
+    "sass": "^1.35.1"
+  }
+}

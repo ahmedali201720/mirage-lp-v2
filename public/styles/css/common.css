@@ -1,0 +1,14 @@
+body {
+  padding: 0;
+}
+body * {
+  box-sizing: border-box;
+}
+body *:not(.fa):not(.fas):not(.far):not(.fab):not(.fad):lang(ar) {
+  font-family: "Cairo", sans-serif;
+}
+body *:not(.fa):not(.fas):not(.far):not(.fab):not(.fad):lang(en) {
+  font-family: "Montaserrat", sans-serif;
+}
+
+/*# sourceMappingURL=common.css.map */
