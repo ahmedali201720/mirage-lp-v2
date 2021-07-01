@@ -9,7 +9,9 @@ $(document).ready(function () {
     var fixedContactButtonOpened = false;
     var mainHeaderMenuTogglerOpened = false;
 
-    fixedContactButton.click(function () {
+    fixedContactButton.click(function (e) {
+
+        e.stopPropagation();
 
         if (!fixedContactButtonOpened) {
             openFixedContactIcon($(this));
@@ -20,7 +22,9 @@ $(document).ready(function () {
 
     });
 
-    mainHeaderMenuToggler.click(function () {
+    mainHeaderMenuToggler.click(function (e) {
+
+        e.stopPropagation();
 
         if (!mainHeaderMenuTogglerOpened) {
             openMainHeaderToggler($(this));
@@ -39,6 +43,17 @@ $(document).ready(function () {
             closeMainHeaderToggler(mainHeaderMenuToggler);
         }
     })
+
+    $("*").not('.utility').click(function () {
+
+        if (fixedContactButtonOpened) {
+            closeFixedContactIcon(fixedContactButton);
+        }
+        if (mainHeaderMenuTogglerOpened) {
+            closeMainHeaderToggler(mainHeaderMenuToggler);
+        }
+
+    });
 
     function openFixedContactIcon(button) {
         $(".fa-ellipsis-v", button).hide();
