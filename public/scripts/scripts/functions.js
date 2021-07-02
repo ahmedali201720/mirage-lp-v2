@@ -1,3 +1,3 @@
-export function myfunction() {
-    console.log('Hii , im function.');
+export function getLang() {
+    return $('html').attr('lang');
 }
