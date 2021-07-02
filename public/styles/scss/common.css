@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding: 0;
 }
@@ -47,6 +51,11 @@ body *:not(.fa):not(.fas):not(.far):not(.fab):not(.fad):lang(en) {
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+.bottomUpAnimation {
+  -webkit-animation-name: bottomUpAnimation;
+          animation-name: bottomUpAnimation;
 }
 
 .rotate-z-180 {
@@ -118,6 +127,7 @@ button {
   border-radius: 50px;
   text-align: center;
   display: none;
+  z-index: 50;
 }
 
 #contactIconsContainer a {
@@ -128,5 +138,83 @@ button {
   margin-bottom: 0.325rem;
   color: #ffffffc2;
   font-size: 2rem;
+}
+
+.contact-form {
+  max-width: 400px;
+  margin: auto;
+  background-color: #cf430b91;
+  padding: 1.5rem 2rem;
+  color: #ffffff;
+  font-size: 0.825rem;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px #000000;
+          box-shadow: 0 0 5px #000000;
+  -webkit-animation: bottomUpAnimation 2s ease-in-out;
+          animation: bottomUpAnimation 2s ease-in-out;
+}
+
+.contact-form input {
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border: none !important;
+  border-radius: 2px;
+}
+
+.contact-form input::-webkit-input-placeholder {
+  font-size: 0.725rem;
+}
+
+.contact-form input:-ms-input-placeholder {
+  font-size: 0.725rem;
+}
+
+.contact-form input::-ms-input-placeholder {
+  font-size: 0.725rem;
+}
+
+.contact-form input::placeholder {
+  font-size: 0.725rem;
+}
+
+.contact-form #mainSendBtn {
+  background-color: #050c1ad5;
+  display: block;
+  color: #ffffff;
+  width: 100%;
+  border: none;
+  border-radius: 25px;
+  padding: 0.625rem 0;
+  font-size: 1rem;
+}
+
+.contact-form #mainSendBtn {
+  position: relative;
+}
+
+.contact-form #mainSendBtn::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #050c1ad5;
+  border-radius: 50px;
+  z-index: -1;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  opacity: 1;
+}
+
+.contact-form #mainSendBtn:hover::after {
+  opacity: 0;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.contact-form #mainSendBtn:hover {
+  background-color: #07132bd5;
 }
 /*# sourceMappingURL=common.css.map */

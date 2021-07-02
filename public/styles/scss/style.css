@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding: 0;
 }
@@ -47,6 +51,11 @@ body *:not(.fa):not(.fas):not(.far):not(.fab):not(.fad):lang(en) {
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+.bottomUpAnimation {
+  -webkit-animation-name: bottomUpAnimation;
+          animation-name: bottomUpAnimation;
 }
 
 .rotate-z-180 {
@@ -118,6 +127,7 @@ button {
   border-radius: 50px;
   text-align: center;
   display: none;
+  z-index: 50;
 }
 
 #contactIconsContainer a {
@@ -130,12 +140,95 @@ button {
   font-size: 2rem;
 }
 
+.contact-form {
+  max-width: 400px;
+  margin: auto;
+  background-color: #cf430b91;
+  padding: 1.5rem 2rem;
+  color: #ffffff;
+  font-size: 0.825rem;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px #000000;
+          box-shadow: 0 0 5px #000000;
+  -webkit-animation: bottomUpAnimation 2s ease-in-out;
+          animation: bottomUpAnimation 2s ease-in-out;
+}
+
+.contact-form input {
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border: none !important;
+  border-radius: 2px;
+}
+
+.contact-form input::-webkit-input-placeholder {
+  font-size: 0.725rem;
+}
+
+.contact-form input:-ms-input-placeholder {
+  font-size: 0.725rem;
+}
+
+.contact-form input::-ms-input-placeholder {
+  font-size: 0.725rem;
+}
+
+.contact-form input::placeholder {
+  font-size: 0.725rem;
+}
+
+.contact-form #mainSendBtn {
+  background-color: #050c1ad5;
+  display: block;
+  color: #ffffff;
+  width: 100%;
+  border: none;
+  border-radius: 25px;
+  padding: 0.625rem 0;
+  font-size: 1rem;
+}
+
+.contact-form #mainSendBtn {
+  position: relative;
+}
+
+.contact-form #mainSendBtn::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #050c1ad5;
+  border-radius: 50px;
+  z-index: -1;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  opacity: 1;
+}
+
+.contact-form #mainSendBtn:hover::after {
+  opacity: 0;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.contact-form #mainSendBtn:hover {
+  background-color: #07132bd5;
+}
+
 .main-section {
   background: -webkit-gradient(linear, left top, right bottom, from(#4419077a), to(#4708087a)), url("../../img/cover-5.jpg");
   background: linear-gradient(to bottom right, #4419077a, #4708087a), url("../../img/cover-5.jpg");
   background-size: cover;
   background-attachment: fixed;
-  min-height: 100vh;
+}
+
+@media only screen and (min-width: 992px) {
+  .main-section {
+    min-height: 100vh;
+  }
 }
 
 .main-section #mainHeader {
@@ -242,6 +335,8 @@ button {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
 }
 
 .main-section .main-banner .text-container .header {
@@ -253,13 +348,24 @@ button {
 }
 
 .main-section .main-banner .text-container .sub-header {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
+  padding: 1.3rem 1rem;
   -webkit-animation: bottomUpAnimation 2.25s ease-in-out;
           animation: bottomUpAnimation 2.25s ease-in-out;
 }
 
+@media only screen and (max-width: 576px) {
+  .main-section .main-banner .text-container .sub-header {
+    font-size: 1.5rem;
+  }
+}
+
+.main-section .main-banner .text-container .description {
+  max-width: 100%;
+}
+
 .main-section .main-banner .text-container .description .desc-list .desc-item {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   margin-bottom: 0.325rem;
   color: #f8e8e4ea;
 }
@@ -295,90 +401,54 @@ button {
           animation: bottomUpAnimation 3.75s ease-in-out;
 }
 
-.main-section .main-banner .text-container #mainButton {
+@media only screen and (max-width: 576px) {
+  .main-section .main-banner .text-container .description .desc-list .desc-item {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .main-section .main-banner .text-container .description .desc-list .desc-item {
+    font-size: 2rem;
+  }
+}
+
+.main-section .main-banner .text-container .main-button {
   width: 100%;
 }
 
-.main-section .main-banner .text-container #mainButton button {
+.main-section .main-banner .text-container .main-button a {
   display: block;
   border: none;
   background-color: #df1a1a;
   color: #ffffff;
-  min-width: 180px;
+  max-width: 200px;
+  text-decoration: none;
   text-align: center;
-  padding: 0.625rem 0;
+  padding: 0.825rem 0;
   border-radius: 25px;
   -webkit-animation: bottomUpAnimation 3.5s ease-in-out;
           animation: bottomUpAnimation 3.5s ease-in-out;
 }
 
 @media only screen and (max-width: 576px) {
-  .main-section .main-banner .text-container #mainButton button {
+  .main-section .main-banner .text-container .main-button a {
     margin: auto;
   }
 }
 
-.main-section #mainSectionForm {
-  max-width: 400px;
-  margin: auto;
-  background-color: #cf430b91;
-  padding: 1.5rem 2rem;
-  color: #ffffff;
-  font-size: 0.825rem;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 0 5px #000000;
-          box-shadow: 0 0 5px #000000;
-  -webkit-animation: bottomUpAnimation 2s ease-in-out;
-          animation: bottomUpAnimation 2s ease-in-out;
-}
-
-.main-section #mainSectionForm input {
-  outline: none !important;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
-  border: none !important;
-  border-radius: 2px;
-}
-
-.main-section #mainSectionForm input::-webkit-input-placeholder {
-  font-size: 0.725rem;
-}
-
-.main-section #mainSectionForm input:-ms-input-placeholder {
-  font-size: 0.725rem;
-}
-
-.main-section #mainSectionForm input::-ms-input-placeholder {
-  font-size: 0.725rem;
-}
-
-.main-section #mainSectionForm input::placeholder {
-  font-size: 0.725rem;
-}
-
-.main-section #mainSectionForm #mainSendBtn {
-  background-color: #050c1ad5;
-  display: block;
-  color: #ffffff;
-  width: 100%;
-  border: none;
-  border-radius: 25px;
-  padding: 0.625rem 0;
-  font-size: 1rem;
-}
-
-.main-section #mainSectionForm #mainSendBtn {
+.main-section .main-banner .text-container .main-button a {
   position: relative;
 }
 
-.main-section #mainSectionForm #mainSendBtn::after {
+.main-section .main-banner .text-container .main-button a::after {
   position: absolute;
   content: "";
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #050c1ad5;
+  background-color: #df1a1a;
   border-radius: 50px;
   z-index: -1;
   -webkit-transition: all 0.4s;
@@ -386,13 +456,268 @@ button {
   opacity: 1;
 }
 
-.main-section #mainSectionForm #mainSendBtn:hover::after {
+.main-section .main-banner .text-container .main-button a:hover::after {
   opacity: 0;
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
 }
 
-.main-section #mainSectionForm #mainSendBtn:hover {
-  background-color: #07132bd5;
+.main-section .main-banner .text-container .main-button a:hover {
+  background-color: #f33939;
+}
+
+@media only screen and (max-width: 576px) {
+  .main-section .main-banner .text-container .main-button a {
+    margin: auto;
+  }
+}
+
+.main-section .main-banner .text-container .image {
+  height: auto;
+  opacity: 0.55;
+}
+
+@media only screen and (max-width: 992px) {
+  .main-section .main-banner .text-container .image {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .main-section .main-banner .text-container .image {
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 992px) and (orientation: portrait) {
+  .main-section .main-banner .text-container {
+    min-height: 1000px;
+  }
+}
+
+@media only screen and (max-width: 576px) and (orientation: portrait) {
+  .main-section .main-banner .text-container {
+    min-height: 620px;
+  }
+}
+
+.services-section {
+  position: relative;
+  background: -webkit-gradient(linear, left top, right bottom, from(#fcfcfcf1), to(#fcf9f9ee)), url("../../img/cover-2.jpg");
+  background: linear-gradient(to bottom right, #fcfcfcf1, #fcf9f9ee), url("../../img/cover-2.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.services-section .header {
+  position: relative;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+.services-section .header h2 {
+  max-width: 220px;
+  margin: auto;
+  color: #632407;
+  font-weight: 900;
+}
+
+.services-section .header p {
+  color: #000000;
+}
+
+.services-section .services-container .service-item {
+  position: relative;
+}
+
+.services-section .services-container .service-item .image {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.services-section .services-container .service-item .image img {
+  width: 80px;
+  height: auto;
+}
+
+.services-section .services-container .service-item .title {
+  text-align: center;
+  color: #08175a;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.services-section .services-container .service-item.first {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.services-section .services-container .service-item.second {
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+}
+
+.services-section .services-container .service-item.third {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+.services-section .services-container .service-item.fourth {
+  -webkit-animation-duration: 3.5s;
+          animation-duration: 3.5s;
+}
+
+.services-section .services-container .service-item.fifth {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+
+.services-section .services-container .service-item.sixth {
+  -webkit-animation-duration: 4.5s;
+          animation-duration: 4.5s;
+}
+
+.services-section .section-link a {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #f46424;
+  border-radius: 30px;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 1.5rem;
+  padding: 0.625rem;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+
+.services-section .section-link a:hover {
+  background-color: #f48c54;
+}
+
+#contactSection .about-container {
+  background: -webkit-gradient(linear, left top, right bottom, from(#42110194), to(#2b030373)), url("../../img/cover-7.jpg");
+  background: linear-gradient(to bottom right, #42110194, #2b030373), url("../../img/cover-7.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (min-width: 992px) {
+  #contactSection .about-container {
+    -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+  }
+}
+
+#contactSection .about-container .item {
+  text-align: center;
+  color: #fce5da;
+}
+
+@media only screen and (max-width: 768px) {
+  #contactSection .about-container .item {
+    padding: 0 4rem;
+    font-size: 2rem;
+    line-height: 3.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #contactSection .about-container .item {
+    padding: 0 4rem;
+    font-size: 2rem;
+    line-height: 3.5rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #contactSection .about-container .item {
+    padding: 0 4rem;
+    font-size: 1.5rem;
+    line-height: 3rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #contactSection .about-container .item {
+    padding: 0 4rem;
+    font-size: 2rem;
+    line-height: 3.5rem;
+  }
+}
+
+#contactSection #contactSectionFormContainer .header {
+  color: #070a33;
+}
+
+@media only screen and (max-width: 768px) {
+  #contactSection #contactSectionFormContainer .header {
+    text-align: center;
+  }
+}
+
+#contactSection #contactSectionFormContainer .header h3 {
+  font-weight: 900;
+}
+
+#contactSection #contactSectionFormContainer #contactSectionForm {
+  background-color: transparent !important;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  width: 100%;
+  max-width: 500px;
+}
+
+#contactSection #contactSectionFormContainer #contactSectionForm label {
+  color: #691608;
+  font-size: 0.925rem;
+}
+
+#contactSection #contactSectionFormContainer #contactSectionForm input {
+  border: 1px solid #a7a1a1 !important;
+}
+
+#contactSection #contactSectionFormContainer #contactSectionForm #contactSendBtn {
+  border-radius: 0;
+  background-color: #d61414;
+  border: none !important;
+  display: block;
+  width: 100%;
+  padding: 0.825rem 0;
+  color: #ffffff;
+}
+
+#footer {
+  background-color: #020311;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+#footer a {
+  color: #f8a382;
 }
 /*# sourceMappingURL=style.css.map */

@@ -181,44 +181,6 @@
             }
         }
     }
-
-    #mainSectionForm {
-        max-width: 400px;
-        margin: auto;
-        background-color: #cf430b91;
-        padding: 1.5rem 2rem;
-        color: $white;
-        font-size: 0.825rem;
-        border-radius: 5px;
-        box-shadow: 0 0 5px #000000;
-        animation: bottomUpAnimation 2s ease-in-out;
-
-        input {
-            outline: none !important;
-            box-shadow: none !important;
-            border: none !important;
-            border-radius: 2px;
-        }
-
-        input::placeholder {
-            font-size: 0.725rem;
-        }
-
-        #mainSendBtn {
-            background-color: #050c1ad5;
-            display: block;
-            color: $white;
-            width: 100%;
-            border: none;
-            border-radius: 25px;
-            padding: 0.625rem 0;
-            font-size: 1rem;
-            @include bubble(#050c1ad5, 1.1);
-            &:hover {
-                background-color: #07132bd5;
-            }
-        }
-    }
 }
 
 .services-section {
@@ -298,6 +260,82 @@
             animation-duration: 5s;
             &:hover {
                 background-color: $orangeLight;
+            }
+        }
+    }
+}
+
+// Contact section styles
+
+#contactSection {
+    .about-container {
+        background: linear-gradient(to bottom right, #42110194, #2b030373), url("../../img/cover-7.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        @media only screen and (min-width: $lg) {
+            clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+        }
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .item {
+            text-align: center;
+            color: #fce5da;
+            @media only screen and (max-width: $md) {
+                padding: 0 4rem;
+                font-size: 2rem;
+                line-height: 3.5rem;
+            }
+            @media only screen and (min-width: $md) {
+                padding: 0 4rem;
+                font-size: 2rem;
+                line-height: 3.5rem;
+            }
+            @media only screen and (min-width: $lg) {
+                padding: 0 4rem;
+                font-size: 1.5rem;
+                line-height: 3rem;
+            }
+            @media only screen and (min-width: $xl) {
+                padding: 0 4rem;
+                font-size: 2rem;
+                line-height: 3.5rem;
+            }
+        }
+    }
+    #contactSectionFormContainer {
+        .header {
+            color: #070a33;
+            @media only screen and (max-width: $md) {
+                text-align: center;
+            }
+            h3 {
+                font-weight: 900;
+            }
+        }
+        #contactSectionForm {
+            background-color: transparent !important;
+            border: none;
+            box-shadow: none;
+            width: 100%;
+            max-width: 500px;
+            label {
+                color: #691608;
+                font-size: 0.925rem;
+            }
+            input {
+                border: 1px solid #a7a1a1 !important;
+            }
+            #contactSendBtn {
+                border-radius: 0;
+                background-color: #d61414;
+                border: none !important;
+                display: block;
+                width: 100%;
+                padding: 0.825rem 0;
+                color: $white;
             }
         }
     }

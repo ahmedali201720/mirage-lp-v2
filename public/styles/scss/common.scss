@@ -10,7 +10,7 @@ $black: #000000;
 $xxl: 1400px;
 $xl: 1200px;
 $lg: 992px;
-$md: 768;
+$md: 768px;
 $sm: 576px;
 $xs: 360px;
 $xxs: 320px;
@@ -186,5 +186,45 @@ button {
         margin-bottom: 0.325rem;
         color: #ffffffc2;
         font-size: 2rem;
+    }
+}
+
+// Form
+
+.contact-form {
+    max-width: 400px;
+    margin: auto;
+    background-color: #cf430b91;
+    padding: 1.5rem 2rem;
+    color: $white;
+    font-size: 0.825rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #000000;
+    animation: bottomUpAnimation 2s ease-in-out;
+
+    input {
+        outline: none !important;
+        box-shadow: none !important;
+        border: none !important;
+        border-radius: 2px;
+    }
+
+    input::placeholder {
+        font-size: 0.725rem;
+    }
+
+    #mainSendBtn {
+        background-color: #050c1ad5;
+        display: block;
+        color: $white;
+        width: 100%;
+        border: none;
+        border-radius: 25px;
+        padding: 0.625rem 0;
+        font-size: 1rem;
+        @include bubble(#050c1ad5, 1.1);
+        &:hover {
+            background-color: #07132bd5;
+        }
     }
 }
