@@ -83,6 +83,8 @@
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
+            padding-right: 0.625rem;
+            padding-left: 0.625rem;
             .header {
                 background-color: #ee670d9f;
                 clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
@@ -157,7 +159,7 @@
                 }
             }
             @media only screen and (max-width: $sm) {
-                min-height: 520px;
+                min-height: 620px;
             }
         }
     }
