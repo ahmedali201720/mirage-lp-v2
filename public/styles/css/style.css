@@ -117,7 +117,11 @@ button {
   background: linear-gradient(to bottom right, #4419077a, #4708087a), url("../../img/cover-5.jpg");
   background-size: cover;
   background-attachment: fixed;
-  min-height: 100vh;
+}
+@media only screen and (min-width: 1200px) {
+  .main-section {
+    min-height: 100vh;
+  }
 }
 .main-section #mainHeader {
   display: flex;
@@ -244,6 +248,11 @@ button {
     font-size: 1rem;
   }
 }
+@media only screen and (min-width: 768) {
+  .main-section .main-banner .text-container .description .desc-list .desc-item {
+    font-size: 2rem;
+  }
+}
 .main-section .main-banner .text-container .main-button {
   width: 100%;
 }
@@ -294,6 +303,11 @@ button {
 @media only screen and (max-width: 576px) {
   .main-section .main-banner .text-container .main-button a {
     margin: auto;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .main-section .main-banner .text-container {
+    min-height: 1000px;
   }
 }
 @media only screen and (max-width: 576px) {

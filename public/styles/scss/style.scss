@@ -8,7 +8,9 @@
     background: linear-gradient(to bottom right, #4419077a, #4708087a), url("../../img/cover-5.jpg");
     background-size: cover;
     background-attachment: fixed;
-    min-height: 100vh;
+    @media only screen and (min-width: $xl) {
+        min-height: 100vh;
+    }
 
     #mainHeader {
         display: flex;
@@ -130,6 +132,9 @@
                         @media only screen and (max-width: $sm) {
                             font-size: 1rem;
                         }
+                        @media only screen and (min-width: $md) {
+                            font-size: 2rem;
+                        }
                     }
                 }
             }
@@ -157,6 +162,9 @@
                         margin: auto;
                     }
                 }
+            }
+            @media only screen and (max-width: $lg) {
+                min-height: 1000px;
             }
             @media only screen and (max-width: $sm) {
                 min-height: 620px;
