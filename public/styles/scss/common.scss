@@ -16,6 +16,10 @@ $xs: 360px;
 $xxs: 320px;
 $fold: 280px;
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     padding: 0;
     * {
@@ -114,6 +118,10 @@ body {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+.bottomUpAnimation {
+    animation-name: bottomUpAnimation;
 }
 
 .rotate-z-180 {

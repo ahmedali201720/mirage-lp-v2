@@ -1,4 +1,8 @@
 @charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding: 0;
 }
@@ -44,6 +48,10 @@ body *:not(.fa):not(.fas):not(.far):not(.fab):not(.fad):lang(en) {
     opacity: 1;
   }
 }
+.bottomUpAnimation {
+  animation-name: bottomUpAnimation;
+}
+
 .rotate-z-180 {
   display: block !important;
   -webkit-transform: rotateZ(180deg);
@@ -118,7 +126,7 @@ button {
   background-size: cover;
   background-attachment: fixed;
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .main-section {
     min-height: 100vh;
   }
@@ -385,6 +393,93 @@ button {
 }
 .main-section #mainSectionForm #mainSendBtn:hover {
   background-color: #07132bd5;
+}
+
+.services-section {
+  position: relative;
+  background: linear-gradient(to bottom right, #fcfcfcf1, #fcf9f9ee), url("../../img/cover-2.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+.services-section .header {
+  position: relative;
+  animation-duration: 1.5s;
+}
+.services-section .header h2 {
+  max-width: 220px;
+  margin: auto;
+  color: #632407;
+  font-weight: 900;
+}
+.services-section .header p {
+  color: #000000;
+}
+.services-section .services-container .service-item {
+  position: relative;
+}
+.services-section .services-container .service-item .image {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.services-section .services-container .service-item .image img {
+  width: 80px;
+  height: auto;
+}
+.services-section .services-container .service-item .title {
+  text-align: center;
+  color: #08175a;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.services-section .services-container .service-item.first {
+  animation-duration: 2s;
+}
+.services-section .services-container .service-item.second {
+  animation-duration: 2.5s;
+}
+.services-section .services-container .service-item.third {
+  animation-duration: 3s;
+}
+.services-section .services-container .service-item.fourth {
+  animation-duration: 3.5s;
+}
+.services-section .services-container .service-item.fifth {
+  animation-duration: 4s;
+}
+.services-section .services-container .service-item.sixth {
+  animation-duration: 4.5s;
+}
+.services-section .section-link a {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #f46424;
+  border-radius: 30px;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 1.5rem;
+  padding: 0.625rem;
+  transition: all 0.4s;
+  animation-duration: 5s;
+}
+.services-section .section-link a:hover {
+  background-color: #f48c54;
+}
+
+#footer {
+  background-color: #020311;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 1.5rem;
+  text-align: center;
+}
+#footer a {
+  color: #f8a382;
 }
 
 /*# sourceMappingURL=style.css.map */

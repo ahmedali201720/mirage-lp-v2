@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding: 0;
 }
@@ -43,6 +47,10 @@ body *:not(.fa):not(.fas):not(.far):not(.fab):not(.fad):lang(en) {
     opacity: 1;
   }
 }
+.bottomUpAnimation {
+  animation-name: bottomUpAnimation;
+}
+
 .rotate-z-180 {
   display: block !important;
   -webkit-transform: rotateZ(180deg);

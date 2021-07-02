@@ -8,7 +8,7 @@
     background: linear-gradient(to bottom right, #4419077a, #4708087a), url("../../img/cover-5.jpg");
     background-size: cover;
     background-attachment: fixed;
-    @media only screen and (min-width: $xl) {
+    @media only screen and (min-width: $lg) {
         min-height: 100vh;
     }
 
@@ -218,5 +218,100 @@
                 background-color: #07132bd5;
             }
         }
+    }
+}
+
+.services-section {
+    position: relative;
+    background: linear-gradient(to bottom right, #fcfcfcf1, #fcf9f9ee), url("../../img/cover-2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    .header {
+        position: relative;
+        animation-duration: 1.5s;
+        h2 {
+            max-width: 220px;
+            margin: auto;
+            color: rgb(99, 36, 7);
+            font-weight: 900;
+        }
+        p {
+            color: #000000;
+        }
+    }
+
+    .services-container {
+        .service-item {
+            position: relative;
+            .image {
+                text-align: center;
+                margin-bottom: 1rem;
+                img {
+                    width: 80px;
+                    height: auto;
+                }
+            }
+            .title {
+                text-align: center;
+                color: #08175a;
+                font-weight: 700;
+                margin-bottom: 0.5rem;
+            }
+            &.first {
+                animation-duration: 2s;
+            }
+            &.second {
+                animation-duration: 2.5s;
+            }
+            &.third {
+                animation-duration: 3s;
+            }
+            &.fourth {
+                animation-duration: 3.5s;
+            }
+            &.fifth {
+                animation-duration: 4s;
+            }
+            &.sixth {
+                animation-duration: 4.5s;
+            }
+        }
+    }
+
+    .section-link {
+        a {
+            display: block;
+            width: 100%;
+            max-width: 220px;
+            margin-right: auto;
+            margin-left: auto;
+            background-color: $orangeDark;
+            border-radius: 30px;
+            color: $white;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+            margin-top: 1.5rem;
+            padding: 0.625rem;
+            transition: all 0.4s;
+            animation-duration: 5s;
+            &:hover {
+                background-color: $orangeLight;
+            }
+        }
+    }
+}
+
+// Footer styles
+
+#footer {
+    background-color: #020311;
+    color: $white;
+    font-weight: 600;
+    padding: 1.5rem;
+    text-align: center;
+    a {
+        color: #f8a382;
     }
 }
