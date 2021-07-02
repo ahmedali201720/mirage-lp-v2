@@ -246,6 +246,11 @@ button {
     margin: auto;
   }
 }
+@media only screen and (max-width: 576px) {
+  .main-section .main-banner .text-container {
+    min-height: 530px;
+  }
+}
 .main-section #mainSectionForm {
   max-width: 400px;
   margin: auto;

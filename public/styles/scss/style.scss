@@ -140,6 +140,9 @@
                     }
                 }
             }
+            @media only screen and (max-width: $sm) {
+                min-height: 530px;
+            }
         }
     }
 
