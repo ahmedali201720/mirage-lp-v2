@@ -218,7 +218,7 @@ button {
   max-width: 100%;
 }
 .main-section .main-banner .text-container .description .desc-list .desc-item {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   margin-bottom: 0.325rem;
   color: #f8e8e4ea;
 }
@@ -305,12 +305,26 @@ button {
     margin: auto;
   }
 }
+.main-section .main-banner .text-container .image {
+  height: auto;
+  opacity: 0.55;
+}
 @media only screen and (max-width: 992px) {
+  .main-section .main-banner .text-container .image {
+    width: 200px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .main-section .main-banner .text-container .image {
+    width: 100px;
+  }
+}
+@media only screen and (max-width: 992px) and (orientation: portrait) {
   .main-section .main-banner .text-container {
     min-height: 1000px;
   }
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 576px) and (orientation: portrait) {
   .main-section .main-banner .text-container {
     min-height: 620px;
   }

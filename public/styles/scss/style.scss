@@ -105,7 +105,7 @@
                 max-width: 100%;
                 .desc-list {
                     .desc-item {
-                        font-size: 1.3rem;
+                        font-size: 1.6rem;
                         margin-bottom: 0.325rem;
                         color: #f8e8e4ea;
                         span {
@@ -163,10 +163,20 @@
                     }
                 }
             }
-            @media only screen and (max-width: $lg) {
+            .image {
+                height: auto;
+                opacity: 0.55;
+                @media only screen and (max-width: $lg) {
+                    width: 200px;
+                }
+                @media only screen and (max-width: $sm) {
+                    width: 100px;
+                }
+            }
+            @media only screen and (max-width: $lg) and (orientation: portrait) {
                 min-height: 1000px;
             }
-            @media only screen and (max-width: $sm) {
+            @media only screen and (max-width: $sm) and (orientation: portrait) {
                 min-height: 620px;
             }
         }
