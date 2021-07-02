@@ -101,6 +101,7 @@ button {
   border-radius: 50px;
   text-align: center;
   display: none;
+  z-index: 50;
 }
 #contactIconsContainer a {
   display: block;
@@ -199,10 +200,15 @@ button {
 }
 .main-section .main-banner .text-container .sub-header {
   font-size: 2.5rem;
-  padding: 1.3rem 0.62rem;
+  padding: 1.3rem 1rem;
   background-color: #fae8e821;
   animation: bottomUpAnimation 2.25s ease-in-out;
   clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+}
+@media only screen and (max-width: 576px) {
+  .main-section .main-banner .text-container .sub-header {
+    font-size: 1.5rem;
+  }
 }
 .main-section .main-banner .text-container .description {
   max-width: 100%;
@@ -232,6 +238,11 @@ button {
 }
 .main-section .main-banner .text-container .description .desc-list .desc-item.fourth {
   animation: bottomUpAnimation 3.75s ease-in-out;
+}
+@media only screen and (max-width: 576px) {
+  .main-section .main-banner .text-container .description .desc-list .desc-item {
+    font-size: 1rem;
+  }
 }
 .main-section .main-banner .text-container .main-button {
   width: 100%;
@@ -279,6 +290,11 @@ button {
 }
 .main-section .main-banner .text-container .main-button a:hover {
   background-color: #f33939;
+}
+@media only screen and (max-width: 576px) {
+  .main-section .main-banner .text-container .main-button a {
+    margin: auto;
+  }
 }
 @media only screen and (max-width: 576px) {
   .main-section .main-banner .text-container {
