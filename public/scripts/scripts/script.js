@@ -15,7 +15,7 @@ $(document).ready(function () {
         rtl: true,
         responsive: {
 
-            1200: {
+            280: {
                 items: 1
             }
 
