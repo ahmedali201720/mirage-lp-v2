@@ -23,4 +23,28 @@ $(document).ready(function () {
 
     });
 
+    $(".contact-carousel").owlCarousel({
+
+        loop: true,
+        margin: 60,
+        mouseDrag: true,
+        touchDrag: true,
+        slideTransition: 'linear',
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        rtl: true,
+        center: true,
+        animatOut: true,
+        navSpeed: 100,
+        responsive: {
+
+            280: {
+                items: 1
+            }
+
+        }
+
+    });
+
 });

@@ -120,6 +120,12 @@ body {
     }
 }
 
+.validation-failed {
+    color: #fa9f9fec !important;
+    font-size: 11px;
+    display: none;
+}
+
 .bottomUpAnimation {
     animation-name: bottomUpAnimation;
 }
@@ -205,7 +211,6 @@ button {
     input {
         outline: none !important;
         box-shadow: none !important;
-        border: none !important;
         border-radius: 2px;
     }
 
@@ -213,7 +218,8 @@ button {
         font-size: 0.725rem;
     }
 
-    #mainSendBtn {
+    #mainSendBtn,
+    #contactSendBtn {
         background-color: #050c1ad5;
         display: block;
         color: $white;
@@ -222,9 +228,38 @@ button {
         border-radius: 25px;
         padding: 0.625rem 0;
         font-size: 1rem;
+        transition: all 0.4s;
         @include bubble(#050c1ad5, 1.1);
         &:hover {
             background-color: #07132bd5;
+        }
+    }
+
+    #contactSendBtn {
+        &:hover {
+            -webkit-transform: scale(1.03);
+            transform: scale(1.03);
+            background-color: #e74040;
+        }
+    }
+}
+
+.custom-header-button {
+    background-color: #702f1177;
+    color: $white;
+    font-weight: 600;
+    padding: 0.825rem;
+    border-radius: 50px;
+    transition: all 0.4s;
+    i {
+        color: $orangeColor;
+        transition: all 0.4s;
+    }
+
+    &:hover {
+        background-color: $orangeColor;
+        i {
+            color: $white;
         }
     }
 }

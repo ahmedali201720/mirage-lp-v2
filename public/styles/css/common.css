@@ -47,6 +47,12 @@ body *:not(.fa):not(.fas):not(.far):not(.fab):not(.fad):lang(en) {
     opacity: 1;
   }
 }
+.validation-failed {
+  color: #fa9f9fec !important;
+  font-size: 11px;
+  display: none;
+}
+
 .bottomUpAnimation {
   animation-name: bottomUpAnimation;
 }
@@ -134,13 +140,13 @@ button {
 .contact-form input {
   outline: none !important;
   box-shadow: none !important;
-  border: none !important;
   border-radius: 2px;
 }
 .contact-form input::placeholder {
   font-size: 0.725rem;
 }
-.contact-form #mainSendBtn {
+.contact-form #mainSendBtn,
+.contact-form #contactSendBtn {
   background-color: #050c1ad5;
   display: block;
   color: #ffffff;
@@ -149,11 +155,14 @@ button {
   border-radius: 25px;
   padding: 0.625rem 0;
   font-size: 1rem;
+  transition: all 0.4s;
 }
-.contact-form #mainSendBtn {
+.contact-form #mainSendBtn,
+.contact-form #contactSendBtn {
   position: relative;
 }
-.contact-form #mainSendBtn::after {
+.contact-form #mainSendBtn::after,
+.contact-form #contactSendBtn::after {
   position: absolute;
   content: "";
   top: 0;
@@ -166,7 +175,8 @@ button {
   transition: all 0.4s;
   opacity: 1;
 }
-.contact-form #mainSendBtn:hover::after {
+.contact-form #mainSendBtn:hover::after,
+.contact-form #contactSendBtn:hover::after {
   opacity: 0;
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
@@ -174,8 +184,33 @@ button {
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
-.contact-form #mainSendBtn:hover {
+.contact-form #mainSendBtn:hover,
+.contact-form #contactSendBtn:hover {
   background-color: #07132bd5;
+}
+.contact-form #contactSendBtn:hover {
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
+  background-color: #e74040;
+}
+
+.custom-header-button {
+  background-color: #702f1177;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.825rem;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+.custom-header-button i {
+  color: #f45c16;
+  transition: all 0.4s;
+}
+.custom-header-button:hover {
+  background-color: #f45c16;
+}
+.custom-header-button:hover i {
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=common.css.map */

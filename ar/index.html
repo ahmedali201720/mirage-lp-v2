@@ -48,10 +48,12 @@
                     <i class="fa fa-times"></i>
 
                     <div class="links-wrapper" id="topHeaderLinksContainer">
-                        <a href="#">خدماتنـا</a>
-                        <a href="#">مشروعاتنـا</a>
-                        <a href="#">اتصل بنـا</a>
-                        <a href="#">من نحـن</a>
+                        <a href="#servicesSection">خدماتنـا</a>
+                        <a href="#contactSection">مشروعاتنـا</a>
+                        <a href="#contactSection">اتصل بنـا</a>
+                        <a
+                            href="http://www.mirageconstruction.org/%D8%B9%D9%86-%D9%85%D9%8A%D8%B1%D8%A7%D8%AC-%D8%A7%D9%84%D8%B9%D9%82%D8%A7%D8%B1%D9%8A%D8%A9">من
+                            نحـن</a>
                     </div>
 
                 </button>
@@ -59,16 +61,16 @@
                 <div class="call-details-wrapper">
 
                     <a href="mailTo:info@mirage-building.com" dir="ltr" class="mail me-2 d-md-inline-block d-none">
-                        info@mirage-building.com
+                        info@mirageconstruction.net
                         <i class="fa fa-envelope me-1"></i>
                     </a>
 
-                    <a href="tel:0201010668909" class="mail d-md-inline-block d-none" dir="ltr">
-                        01010668909
+                    <a href="tel:0201010668909" class="mail custom-header-button d-md-inline-block d-none" dir="ltr">
+                        01011113222
                         <i class="fa fa-phone-alt me-1" dir="ltr"></i>
                     </a>
 
-                    <a href="#contactSection" class="main-call-now d-md-none d-block" id="mainCallNow">
+                    <a href="tel:01011113222" class="main-call-now d-md-none d-block" id="mainCallNow">
                         <i class="fa fa-envelope me-1"></i>
                         اتصل الآن
                     </a>
@@ -168,31 +170,40 @@
                             <div class="form-group mb-2">
 
                                 <label for="fullName" class="form-label">الأسم بالكامل</label>
-                                <input class="form-control" type="text" id="fullName" name="fullName"
+                                <input class="form-control" type="text" id="mainFullName" name="fullName"
                                     placeholder="ادخل اسمك كاملاً...">
+                                <div class="validation validation-failed mt-1">
+                                    ادخل اسم صحيح (4 حروف على الأقل)
+                                </div>
 
                             </div>
 
                             <div class="form-group mb-2">
 
                                 <label for="mobile" class="form-label">الموبايل</label>
-                                <input class="form-control" type="text" id="mobile" name="mobile"
+                                <input class="form-control" type="text" id="mainMobile" name="mobile"
                                     placeholder="ادخل رقم الهاتف">
+                                <div class="validation validation-failed mt-1">
+                                    ادخل رقم موبايل صحيح
+                                </div>
 
                             </div>
 
                             <div class="form-group mb-2">
 
                                 <label for="email" class="form-label">البريد الإلكترونى</label>
-                                <input class="form-control" type="email" id="email" name="email"
+                                <input class="form-control" type="email" id="mainEmail" name="email"
                                     placeholder="ادخل البريد الإلكترونى..">
+                                <div class="validation validation-failed mt-1">
+                                    ادخل بريد الكترونى صحيح
+                                </div>
 
                             </div>
 
                             <div class="form-group mb-2">
 
                                 <label for="time" class="form-label">أنسب وقت للاتصال</label>
-                                <input class="form-control" type="text" id="time" name="time"
+                                <input class="form-control" type="text" id="mainTime" name="time"
                                     placeholder="مثال : الثالثة عصراً">
 
                             </div>
@@ -341,7 +352,7 @@
                 </div>
 
                 <div class="section-link">
-                    <a href="#"> <i class="fa fa-home-alt me-1"></i> احجز وحدتك الآن</a>
+                    <a href="#contactSection"> <i class="fa fa-home-alt me-1"></i>تواصل معنا الآن</a>
                 </div>
 
             </div>
@@ -375,6 +386,9 @@
                                 <label for="fullName" class="form-label">الأسم بالكامل</label>
                                 <input class="form-control" type="text" id="fullName" name="fullName"
                                     placeholder="ادخل اسمك كاملاً...">
+                                <div class="validation validation-failed mt-1">
+                                    الاسم عير صالح ( 4 حروف على الأقل )
+                                </div>
 
                             </div>
 
@@ -383,6 +397,9 @@
                                 <label for="mobile" class="form-label">الموبايل</label>
                                 <input class="form-control" type="text" id="mobile" name="mobile"
                                     placeholder="ادخل رقم الهاتف">
+                                <div class="validation validation-failed mt-1">
+                                    رقم الموبايل غير صالح
+                                </div>
 
                             </div>
 
@@ -391,6 +408,9 @@
                                 <label for="email" class="form-label">البريد الإلكترونى</label>
                                 <input class="form-control" type="email" id="email" name="email"
                                     placeholder="ادخل البريد الإلكترونى..">
+                                <div class="validation validation-failed mt-1">
+                                    ادخل بريد الكترونى صالح
+                                </div>
 
                             </div>
 
@@ -420,7 +440,7 @@
 
                         <div class="fa fa-home-alt mb-lg-5 mb-4 fa-4x text-white"></div>
 
-                        <div class="owl-carousel">
+                        <div class="contact-carousel owl-carousel">
 
                             <h6 class="item">
                                 نقدم لكم مشروعات بأرقى المناطق و الأحياء فى القاهرة الجديدة والتجمع الخامس
@@ -458,8 +478,8 @@
                 <div class="col-12">
 
                     <p class="mb-0">
-                        لمعرفة المزيد زور <a href="#">موقعنا</a> <br class="d-md-none d-block"> <i
-                            class="fa fa-copyright me-1"></i> جميع الحقوق
+                        لمعرفة المزيد زور <a href="http://www.mirageconstruction.org/">موقعنا</a> <br
+                            class="d-md-none d-block"> <i class="fa fa-copyright me-1"></i> جميع الحقوق
                         محفظوظة (ميراج 2021)
                     </p>
 
@@ -480,11 +500,12 @@
 
     <div class="contact-icons-container" id="contactIconsContainer">
 
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.facebook.com/DevelopmentsMirage"><i class="fab fa-facebook"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=201011113222"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://twitter.com/Mirage_Dev"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/company/mirageconstruction/"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.youtube.com/channel/UCQT3vnyspo561tu8gDFCzpQ/videos"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/mirage.developments/"><i class="fab fa-instagram"></i></a>
 
     </div>
 
@@ -497,6 +518,7 @@
     <script src="../public/scripts/resources/owl.carousel.min.js"></script>
     <script src="../public/scripts/scripts/utility.js"></script>
     <script src="../public/scripts/scripts/animation.js"></script>
+    <script src="../public/scripts/scripts/validation.js"></script>
     <script type="module" src="../public/scripts/scripts/script.js"></script>
 
 </body>
