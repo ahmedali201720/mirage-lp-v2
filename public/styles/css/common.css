@@ -129,7 +129,7 @@ button {
 .contact-form {
   max-width: 400px;
   margin: auto;
-  background-color: #cf430b91;
+  background-color: #110f0e91;
   padding: 1.5rem 2rem;
   color: #ffffff;
   font-size: 0.825rem;
@@ -147,7 +147,7 @@ button {
 }
 .contact-form #mainSendBtn,
 .contact-form #contactSendBtn {
-  background-color: #050c1ad5;
+  background-color: #f46424;
   display: block;
   color: #ffffff;
   width: 100%;
@@ -186,12 +186,16 @@ button {
 }
 .contact-form #mainSendBtn:hover,
 .contact-form #contactSendBtn:hover {
-  background-color: #07132bd5;
+  background-color: #f48c54;
 }
 .contact-form #contactSendBtn:hover {
   -webkit-transform: scale(1.03);
   transform: scale(1.03);
   background-color: #e74040;
+}
+
+#contactSectionForm .validation-failed {
+  color: #d10e0e !important;
 }
 
 .custom-header-button {
@@ -201,9 +205,21 @@ button {
   padding: 0.825rem;
   border-radius: 50px;
   transition: all 0.4s;
+  text-align: center;
+}
+@media only screen and (max-width: 575px) {
+  .custom-header-button {
+    width: 120px;
+    font-size: 0.925rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .custom-header-button {
+    width: 150px;
+  }
 }
 .custom-header-button i {
-  color: #f45c16;
+  color: lawngreen;
   transition: all 0.4s;
 }
 .custom-header-button:hover {

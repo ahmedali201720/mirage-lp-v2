@@ -89,6 +89,29 @@ $(document).ready(function () {
     });
 
     $("#mainSectionForm").submit(function (e) {
+
+        emptyFieldObj = validateEmptyFields($("#mainFullName").val(), $("#mainMobile").val(), $("#mainEmail").val());
+
+        if (!emptyFieldObj['nameValid']) {
+            console.log(emptyFieldObj)
+            $("#mainFullName").parent().find('.validation-failed').show(400);
+            mainFormValidation['name'] = false;
+            e.preventDefault();
+        }
+
+        if (!emptyFieldObj['mobileValid']) {
+            $("#mainMobile").parent().find('.validation-failed').show(400);
+            mainFormValidation['mobile'] = false;
+            e.preventDefault();
+        }
+
+        if (!emptyFieldObj['emailValid']) {
+            e.preventDefault();
+            $("#mainEmail").parent().find('.validation-failed').show(400);
+            mainFormValidation['email'] = false;
+            e.preventDefault();
+        }
+
         for (var key in mainFormValidation) {
 
             if (!mainFormValidation[key]) {
@@ -100,7 +123,28 @@ $(document).ready(function () {
     });
 
     $("#contactSectionForm").submit(function (e) {
-        console.log(contactFormValidation);
+
+        emptyFieldObj = validateEmptyFields($("#fullName").val(), $("#mobile").val(), $("#email").val());
+
+        if (!emptyFieldObj['nameValid']) {
+            $("#fullName").parent().find('.validation-failed').show(400);
+            contactFormValidation['name'] = false;
+            e.preventDefault();
+        }
+
+        if (!emptyFieldObj['mobileValid']) {
+            $("#mobile").parent().find('.validation-failed').show(400);
+            contactFormValidation['mobile'] = false;
+            e.preventDefault();
+        }
+
+        if (!emptyFieldObj['emailValid']) {
+            e.preventDefault();
+            $("#email").parent().find('.validation-failed').show(400);
+            contactFormValidation['email'] = false;
+            e.preventDefault();
+        }
+
         for (var key in contactFormValidation) {
 
             if (!contactFormValidation[key]) {
@@ -136,6 +180,14 @@ $(document).ready(function () {
         }
     }
 
+    function validateEmptyFields(name, mobile, email) {
 
+        return {
+            nameValid: name ? true : false,
+            mobileValid: mobile ? true : false,
+            emailValid: email ? true : false
+        }
+
+    }
 
 });

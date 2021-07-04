@@ -1,3 +1,5 @@
+import { getWindowSize } from "./functions.js";
+
 $(document).ready(function () {
 
     // owl carousel scripts
@@ -47,5 +49,13 @@ $(document).ready(function () {
         }
 
     });
+
+    // handle order of form and text column (breakpoint : 768px)
+
+    if (getWindowSize() < 992) {
+
+        $("#formColumn").insertBefore("#textColumn");
+
+    }
 
 });

@@ -41,39 +41,20 @@
 
         <div class="container">
 
-            <header class="main-header mb-3" id="mainHeader">
+            <header class="main-header mb-3 px-4 mb-md-3 mb-5" id="mainHeader">
 
-                <button class="main-header-menu-toggler utility" id="mainHeaderMenuToggler">
-                    <i class="fa fa-bars"></i>
-                    <i class="fa fa-times"></i>
-
-                    <div class="links-wrapper" id="topHeaderLinksContainer">
-                        <a href="#servicesSection">خدماتنـا</a>
-                        <a href="#contactSection">مشروعاتنـا</a>
-                        <a href="#contactSection">اتصل بنـا</a>
-                        <a
-                            href="http://www.mirageconstruction.org/%D8%B9%D9%86-%D9%85%D9%8A%D8%B1%D8%A7%D8%AC-%D8%A7%D9%84%D8%B9%D9%82%D8%A7%D8%B1%D9%8A%D8%A9">من
-                            نحـن</a>
-                    </div>
-
-                </button>
+                <div class="logo-wrapper">
+                    <img src="../public/img/logo.png" alt="mirage">
+                </div>
 
                 <div class="call-details-wrapper">
 
-                    <a href="mailTo:info@mirage-building.com" dir="ltr" class="mail me-2 d-md-inline-block d-none">
-                        info@mirageconstruction.net
-                        <i class="fa fa-envelope me-1"></i>
-                    </a>
-
-                    <a href="tel:0201010668909" class="mail custom-header-button d-md-inline-block d-none" dir="ltr">
+                    <a href="https://api.whatsapp.com/send?phone=201011113222" class="mail custom-header-button"
+                        dir="ltr">
                         01011113222
-                        <i class="fa fa-phone-alt me-1" dir="ltr"></i>
+                        <i class="fab fa-whatsapp me-1" dir="ltr"></i>
                     </a>
 
-                    <a href="tel:01011113222" class="main-call-now d-md-none d-block" id="mainCallNow">
-                        <i class="fa fa-envelope me-1"></i>
-                        اتصل الآن
-                    </a>
 
                 </div>
 
@@ -85,9 +66,9 @@
 
             <div class="container">
 
-                <div class="row">
+                <div class="row d-flex flex-lg-row flex-column-reverse" id="mainRow">
 
-                    <div class="col-xl-9 col-lg-8 mb-lg-0 mb-2">
+                    <div class="col-xl-9 col-lg-8 mb-lg-0 mb-2" id="formColumn">
 
                         <div class="text-container">
 
@@ -163,11 +144,7 @@
 
                     </div>
 
-                    <div class="col-xl-3 col-lg-4">
-
-                        <div class="title-label d-lg-none d-block mb-4">
-                            <h3 class="text-center">إملإ البيانات التالية</h3>
-                        </div>
+                    <div class="col-xl-3 col-lg-4" id="textColumn">
 
                         <form action="" class="main-section-form contact-form" id="mainSectionForm">
 
@@ -482,8 +459,7 @@
                 <div class="col-12">
 
                     <p class="mb-0">
-                        لمعرفة المزيد زور <a href="http://www.mirageconstruction.org/">موقعنا</a> <br
-                            class="d-md-none d-block"> <i class="fa fa-copyright me-1"></i> جميع الحقوق
+                        <i class="fa fa-copyright me-1"></i> جميع الحقوق
                         محفظوظة (ميراج 2021)
                     </p>
 
@@ -495,24 +471,6 @@
 
     </footer>
 
-    <!-- Fixed contact button -->
-
-    <button class="fixed-contact-button utility" id="fixedContactButton">
-        <i class="fas fa-ellipsis-v toggle-icon"></i>
-        <i class="fa fa-times toggle-icon"></i>
-    </button>
-
-    <div class="contact-icons-container" id="contactIconsContainer">
-
-        <a href="https://www.facebook.com/DevelopmentsMirage"><i class="fab fa-facebook"></i></a>
-        <a href="https://api.whatsapp.com/send?phone=201011113222"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://twitter.com/Mirage_Dev"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.linkedin.com/company/mirageconstruction/"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.youtube.com/channel/UCQT3vnyspo561tu8gDFCzpQ/videos"><i class="fab fa-youtube"></i></a>
-        <a href="https://www.instagram.com/mirage.developments/"><i class="fab fa-instagram"></i></a>
-
-    </div>
-
     <!-- Popper js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
@@ -520,7 +478,6 @@
     <script src="../public/scripts/resources/jquery351.js"></script>
     <script src="../public/scripts/resources/bootstrap.min.js"></script>
     <script src="../public/scripts/resources/owl.carousel.min.js"></script>
-    <script src="../public/scripts/scripts/utility.js"></script>
     <script src="../public/scripts/scripts/animation.js"></script>
     <script src="../public/scripts/scripts/validation.js"></script>
     <script type="module" src="../public/scripts/scripts/script.js"></script>

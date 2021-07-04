@@ -200,7 +200,7 @@ button {
 .contact-form {
     max-width: 400px;
     margin: auto;
-    background-color: #cf430b91;
+    background-color: #110f0e91;
     padding: 1.5rem 2rem;
     color: $white;
     font-size: 0.825rem;
@@ -220,7 +220,7 @@ button {
 
     #mainSendBtn,
     #contactSendBtn {
-        background-color: #050c1ad5;
+        background-color: $orangeDark;
         display: block;
         color: $white;
         width: 100%;
@@ -231,7 +231,7 @@ button {
         transition: all 0.4s;
         @include bubble(#050c1ad5, 1.1);
         &:hover {
-            background-color: #07132bd5;
+            background-color: $orangeLight;
         }
     }
 
@@ -244,6 +244,12 @@ button {
     }
 }
 
+#contactSectionForm {
+    .validation-failed {
+        color: #d10e0e !important;
+    }
+}
+
 .custom-header-button {
     background-color: #702f1177;
     color: $white;
@@ -251,8 +257,16 @@ button {
     padding: 0.825rem;
     border-radius: 50px;
     transition: all 0.4s;
+    @media only screen and(max-width : 575px) {
+        width: 120px;
+        font-size: 0.925rem;
+    }
+    @media only screen and(min-width : 576px) {
+        width: 150px;
+    }
+    text-align: center;
     i {
-        color: $orangeColor;
+        color: lawngreen;
         transition: all 0.4s;
     }
 

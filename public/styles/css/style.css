@@ -130,7 +130,7 @@ button {
 .contact-form {
   max-width: 400px;
   margin: auto;
-  background-color: #cf430b91;
+  background-color: #110f0e91;
   padding: 1.5rem 2rem;
   color: #ffffff;
   font-size: 0.825rem;
@@ -148,7 +148,7 @@ button {
 }
 .contact-form #mainSendBtn,
 .contact-form #contactSendBtn {
-  background-color: #050c1ad5;
+  background-color: #f46424;
   display: block;
   color: #ffffff;
   width: 100%;
@@ -187,12 +187,16 @@ button {
 }
 .contact-form #mainSendBtn:hover,
 .contact-form #contactSendBtn:hover {
-  background-color: #07132bd5;
+  background-color: #f48c54;
 }
 .contact-form #contactSendBtn:hover {
   -webkit-transform: scale(1.03);
   transform: scale(1.03);
   background-color: #e74040;
+}
+
+#contactSectionForm .validation-failed {
+  color: #d10e0e !important;
 }
 
 .custom-header-button {
@@ -202,9 +206,21 @@ button {
   padding: 0.825rem;
   border-radius: 50px;
   transition: all 0.4s;
+  text-align: center;
+}
+@media only screen and (max-width: 575px) {
+  .custom-header-button {
+    width: 120px;
+    font-size: 0.925rem;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .custom-header-button {
+    width: 150px;
+  }
 }
 .custom-header-button i {
-  color: #f45c16;
+  color: lawngreen;
   transition: all 0.4s;
 }
 .custom-header-button:hover {
@@ -215,7 +231,7 @@ button {
 }
 
 .main-section {
-  background: linear-gradient(to bottom right, #4419077a, #4708087a), url("../../img/cover-5.jpg");
+  background: linear-gradient(to bottom right, #250e037a, #1403037a), url("../../img/mirage-cover.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -229,53 +245,17 @@ button {
   justify-content: space-between;
   align-items: center;
 }
-.main-section #mainHeader #mainHeaderMenuToggler {
-  position: relative;
-  width: 50px;
-  height: 50px;
-  border: none;
-  background-color: transparent;
-  font-size: 2rem;
-  color: #efefef;
-  transition: all 0.4s;
+@media only screen and (max-width: 575px) {
+  .main-section #mainHeader .logo-wrapper img {
+    width: 50px;
+    opacity: 0.75;
+  }
 }
-.main-section #mainHeader #mainHeaderMenuToggler i {
-  font-weight: 500;
-}
-.main-section #mainHeader #mainHeaderMenuToggler i.fa-times {
-  display: none;
-}
-.main-section #mainHeader #mainHeaderMenuToggler:hover {
-  color: #efefefbd;
-}
-.main-section #mainHeader #mainHeaderMenuToggler #topHeaderLinksContainer {
-  position: absolute;
-  top: 150%;
-  min-width: 220px;
-  right: 0;
-  background-color: #000000e1;
-  padding: 3rem 1.2rem;
-  border-radius: 50px;
-  display: none;
-  z-index: 50;
-}
-.main-section #mainHeader #mainHeaderMenuToggler #topHeaderLinksContainer a {
-  display: block;
-  color: #f5eeeeb7;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
-  margin: 2rem 0;
-  transition: all 0.3s;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-}
-.main-section #mainHeader #mainHeaderMenuToggler #topHeaderLinksContainer a:hover {
-  color: #f8cbb6b7;
-}
-.main-section #mainHeader #mainHeaderMenuToggler #topHeaderLinksContainer a:hover:hover {
-  -webkit-transform: scaleX(1.03) scaleY(1.03);
-  transform: scaleX(1.03) scaleY(1.03);
+@media only screen and (min-width: 576px) {
+  .main-section #mainHeader .logo-wrapper img {
+    width: 70px;
+    opacity: 0.85;
+  }
 }
 .main-section #mainHeader .call-details-wrapper a {
   color: #ffffff;
@@ -581,7 +561,8 @@ button {
 }
 #contactSection #contactSectionFormContainer #contactSectionForm #contactSendBtn {
   border-radius: 0;
-  background-color: #d61414;
+  background-color: #f45c16;
+  border-radius: 50px;
   border: none !important;
   display: block;
   width: 100%;

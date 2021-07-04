@@ -5,7 +5,7 @@
 // Main Section Styles
 
 .main-section {
-    background: linear-gradient(to bottom right, #4419077a, #4708087a), url("../../img/cover-5.jpg");
+    background: linear-gradient(to bottom right, #250e037a, #1403037a), url("../../img/mirage-cover.jpg");
     background-size: cover;
     background-attachment: fixed;
     @media only screen and (min-width: $lg) {
@@ -16,48 +16,18 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        #mainHeaderMenuToggler {
-            position: relative;
-            width: 50px;
-            height: 50px;
-            border: none;
-            background-color: transparent;
-            font-size: 2rem;
-            color: #efefef;
-            transition: all 0.4s;
-            i {
-                font-weight: 500;
-                &.fa-times {
-                    display: none;
+
+        .logo-wrapper {
+            @media only screen and(max-width : 575px) {
+                img {
+                    width: 50px;
+                    opacity: 0.75;
                 }
             }
-            &:hover {
-                color: #efefefbd;
-            }
-            #topHeaderLinksContainer {
-                position: absolute;
-                top: 150%;
-                min-width: 220px;
-                right: 0;
-                background-color: #000000e1;
-                padding: 3rem 1.2rem;
-                border-radius: 50px;
-                display: none;
-                z-index: 50;
-                a {
-                    display: block;
-                    color: #f5eeeeb7;
-                    text-decoration: none;
-                    font-size: 16px;
-                    font-weight: 600;
-                    margin: 2rem 0;
-                    transition: all 0.3s;
-                    backface-visibility: hidden;
-                    transform: translateZ(0);
-                    &:hover {
-                        color: #f8cbb6b7;
-                        @include scale-element(1.03, 1.03);
-                    }
+            @media only screen and(min-width : 576px) {
+                img {
+                    width: 70px;
+                    opacity: 0.85;
                 }
             }
         }
@@ -330,7 +300,8 @@
             }
             #contactSendBtn {
                 border-radius: 0;
-                background-color: #d61414;
+                background-color: $orangeColor;
+                border-radius: 50px;
                 border: none !important;
                 display: block;
                 width: 100%;
