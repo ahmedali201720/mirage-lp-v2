@@ -35,7 +35,8 @@ $(document).ready(function () {
         autoplayHoverPause: true,
         rtl: true,
         center: true,
-        animatOut: true,
+        animateOut: 'slideOutDown',
+        animateIn: 'flipInX',
         navSpeed: 100,
         responsive: {
 
